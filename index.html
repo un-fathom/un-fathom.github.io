@@ -1,90 +1,63 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>un-fathom</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
 
-<head>
-  <title>un-fathom</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Yrsa:wght@300;400;500;600;700&display=swap');
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <img src="/resources/psi.svg" alt="Greek psi" class="header__logo" />
+        <nav class="header__nav">
+          <a href="#about" class="header__navlink">About</a>
+          <a href="#projects" class="header__navlink">Projects</a>
+          <a href="#contact" class="header__navlink">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    :root {
-      --color-background: #F1D4FF;
-      --color-card: #BEA5CC;
-    }
+    <section class="hero">
+      <img
+        src="/resources/hero-lines.svg"
+        alt="Background lines"
+        class="hero__background-lines" />
 
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-    }
+      <div class="hero__wrapper">
+        <div class="hero__title-block">
+          <h1 class="hero__title">Troy Mackenzie-Smee</h1>
+          <div class="hero__divider"></div>
+          <h2 class="hero__subtitle">Front-end developer</h2>
+        </div>
 
-    * {
-      box-sizing: border-box;
-    }
+        <div class="hero__doorway"></div>
+      </div>
 
-    body {
-      background-color: var(--color-background);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+      <div class="hero__path"></div>
+    </section>
 
-    main {
-      background-color: var(--color-card);
-      background: url("./resources/title-background.svg") center / cover no-repeat var(--color-card);
-      padding: 32px 100px;
-      text-align: center;
-      position: relative;
-      box-shadow: 16px 16px 0px rgba(0, 0, 0, 0.35);
-      transform: translate(-8px, -8px);
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-      cursor: pointer;
-    }
+    <section>
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </section>
 
-    main:hover {
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
-      transform: translate(0px, 0px);
-    }
+    <section>
+      <div>
+        <h2>Projects</h2>
+        <span></span>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
 
-    main::after {
-      content: "";
-      position: absolute;
-      inset: 5px;
-      border: 5px solid #FFF;
-      outline: 3px solid #FFF;
-      outline-offset: -11px;
-    }
+      <div>
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+      </div>
+    </section>
 
-    .title {
-      font: 300 4rem 'Yrsa', serif;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    }
-
-    @keyframes rotate-and-scale {
-      0% {
-        transform: rotate(0deg) scale(1);
-      }
-
-      50% {
-        transform: rotate(180deg) scale(1.5);
-      }
-
-      100% {
-        transform: rotate(360deg) scale(1);
-      }
-    }
-  </style>
-  <script>
-    rotate = () => {
-    }
-  </script>
-</head>
-
-<body>
-  <main onclick="rotate()">
-    <h1 class="title">un-fathom</h1>
-  </main>
-</body>
-
+    <footer>
+      <span>© Troy Mackenzie-Smee</span>
+      <img src="/resources/github.svg" alt="GitHub logo" />
+    </footer>
+  </body>
 </html>

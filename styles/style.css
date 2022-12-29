@@ -1,0 +1,14 @@
+@import "reset.css";
+@import "header.css";
+@import "hero.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Petrona:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-family: "Petrona", Times, serif;
+}
+
+:root {
+  --background-primary: hsl(159, 12%, 59%);
+  --background-secondary: hsl(159, 18%, 72%);
+}

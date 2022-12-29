@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  background-color: var(--background-primary);
+}
+
+.header__wrapper {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: auto;
+  width: 48px;
+}
+
+.header__nav :not(:last-child) {
+  margin-right: 4rem;
+}
+
+.header__navlink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.75rem;
+  transition: opacity 150ms ease-in-out;
+}
+
+.header__navlink:hover {
+  opacity: 0.7;
+}
