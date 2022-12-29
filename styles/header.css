@@ -8,8 +8,7 @@
   transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
-/* Switch to fixed positioning, and stick the header to the top of the page */
-html:not([data-scroll="0"]) header {
+html:not([data-scroll="0"]) .header {
   backdrop-filter: blur(4px);
   border-color: hsla(0, 0%, 100%, 0.2);
   background-color: hsl(159, 12%, 59%, 0.5);
