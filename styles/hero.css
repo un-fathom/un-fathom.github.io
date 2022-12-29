@@ -53,9 +53,9 @@
 .hero__path {
   bottom: 0;
   position: absolute;
-  height: 200px;
+  height: calc((100vh - 450px) / 2);
   width: 100%;
-  background: black;
+  background: linear-gradient(180deg, #fff4d8 0%, #abc5bc 100%);
   clip-path: polygon(
     calc(100vw - 1.5rem - 300px) 0,
     calc(100vw - 1.5rem) 0,

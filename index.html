@@ -36,22 +36,29 @@
       <div class="hero__path"></div>
     </section>
 
-    <section>
-      <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <section class="about">
+      <div class="about__wrapper">
+        <div class="section-title">
+          <h2 class="section-title__title">About</h2>
+          <div class="section-title__divider"></div>
+          <p class="section-title__subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <div>
-        <h2>Projects</h2>
-        <span></span>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
+    <section class="projects">
+      <div class="projects__wrapper">
+        <div class="section-title">
+          <h2 class="section-title__title">Projects</h2>
+          <div class="section-title__divider"></div>
+          <p class="section-title__subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
 
-      <div>
-        <div>Card 1</div>
-        <div>Card 2</div>
-        <div>Card 3</div>
+        <div class="projects__cards-wrapper">
+          <div class="projects__card">Card 1</div>
+          <div class="projects__card">Card 2</div>
+          <div class="projects__card">Card 3</div>
+        </div>
       </div>
     </section>
 
@@ -59,5 +66,11 @@
       <span>© Troy Mackenzie-Smee</span>
       <img src="/resources/github.svg" alt="GitHub logo" />
     </footer>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        document.documentElement.dataset.scroll = window.scrollY
+      })
+    </script>
   </body>
 </html>
