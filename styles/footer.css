@@ -22,6 +22,19 @@
   margin-right: 1rem;
 }
 
+.footer__github-anchor {
+  transition: opacity 150ms ease-in-out;
+}
+
+.footer__github {
+  height: auto;
+  width: 35px;
+}
+
+.footer__github-anchor:hover {
+  opacity: 0.7;
+}
+
 .footer__copyright {
   color: white;
   font-family: "Inter", sans-serif;
