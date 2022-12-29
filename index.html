@@ -1,12 +1,126 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>un-fathom</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
 
-<head>
-  <title>un-fathom</title>
-</head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="#" class="header__logo">
+          <img src="/resources/psi.svg" alt="Greek psi" />
+        </a>
+        <nav class="header__nav">
+          <a href="#about" class="header__navlink">About</a>
+          <a href="#projects" class="header__navlink">Projects</a>
+          <a href="#contact" class="header__navlink">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-<body>
-  <h1>Test</h1>
-</body>
+    <section class="hero">
+      <img
+        src="/resources/hero-lines.svg"
+        alt="Background lines"
+        class="hero__background-lines" />
 
+      <div class="hero__wrapper">
+        <div class="hero__title-block">
+          <h1 class="hero__title">Troy Mackenzie-Smee</h1>
+          <div class="hero__divider"></div>
+          <h2 class="hero__subtitle">Front-end developer</h2>
+        </div>
+
+        <div class="hero__doorway"></div>
+      </div>
+
+      <div class="hero__path"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about__wrapper">
+        <div class="section-title">
+          <h2 class="section-title__title">About</h2>
+          <div class="section-title__divider"></div>
+          <p class="section-title__subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="projects__circle projects__circle-1"></div>
+      <div class="projects__circle projects__circle-2"></div>
+
+      <div class="projects__wrapper">
+        <div class="section-title">
+          <h2 class="section-title__title">Projects</h2>
+          <div class="section-title__divider"></div>
+          <p class="section-title__subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="projects__cards-wrapper">
+          <a href="#!" class="projects__card">
+            <h3 class="projects__card-title">Project 1</h3>
+            <div class="projects__card-divider"></div>
+            <p class="projects__card-description">Lorem ipsum dolor sit amet</p>
+            <div class="project__card-image-wrapper">
+              <img
+                src="/resources/project-1.jpg"
+                alt="Project 1"
+                class="projects__card-image" />
+            </div>
+          </a>
+          <a href="#!" class="projects__card">
+            <h3 class="projects__card-title">Project 2</h3>
+            <div class="projects__card-divider"></div>
+            <p class="projects__card-description">Lorem ipsum dolor sit amet</p>
+            <div class="project__card-image-wrapper">
+              <img
+                src="/resources/project-2.jpg"
+                alt="Project 2"
+                class="projects__card-image" />
+            </div>
+          </a>
+          <a href="#!" class="projects__card">
+            <h3 class="projects__card-title">Project 3</h3>
+            <div class="projects__card-divider"></div>
+            <p class="projects__card-description">Lorem ipsum dolor sit amet</p>
+            <div class="project__card-image-wrapper">
+              <img
+                src="/resources/project-3.jpg"
+                alt="Project 3"
+                class="projects__card-image" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__copyright-wrapper">
+          <img src="/resources/psi.svg" alt="Greek psi" class="footer__logo" />
+          <span class="footer__copyright">© Troy Mackenzie-Smee</span>
+        </div>
+        <div class="footer__socials">
+          <a
+            href="https://github.com/un-fathom"
+            target="_blank"
+            class="footer__github-anchor">
+            <img
+              src="/resources/github.svg"
+              alt="GitHub logo"
+              class="footer__github" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        document.documentElement.dataset.scroll = window.scrollY
+      })
+    </script>
+  </body>
 </html>
