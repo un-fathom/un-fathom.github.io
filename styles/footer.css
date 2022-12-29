@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--background-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer__wrapper {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright-wrapper {
+  display: flex;
+}
+
+.footer__logo {
+  height: auto;
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.footer__copyright {
+  color: white;
+  font-family: "Inter", sans-serif;
+}
