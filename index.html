@@ -8,6 +8,9 @@
   <body>
     <script>
       document.documentElement.dataset.scroll = 0
+      document.addEventListener("scroll", () => {
+        document.documentElement.dataset.scroll = window.scrollY
+      })
     </script>
     <header class="header">
       <div class="header__wrapper">
@@ -47,6 +50,43 @@
           <h2 class="section-title__title">About</h2>
           <div class="section-title__divider"></div>
           <p class="section-title__subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="about__flex-row">
+          <ul class="about__categories">
+            <li class="about__category" data-active="true">
+              <div class="about__heading-container">
+                <span class="about__bullet"></span>
+                <h3 class="about__category-heading">Experience</h3>
+              </div>
+              <p class="about__category-description">
+                Strong HTML, CSS, and JavaScript fundamentals. Experience with
+                Solidity and Web3 APIs.
+              </p>
+            </li>
+            <li class="about__category" data-active="false">
+              <div class="about__heading-container">
+                <span class="about__bullet"></span>
+                <h3 class="about__category-heading">Technologies</h3>
+              </div>
+              <p class="about__category-description">
+                TailwindCSS, SASS, and React frameworks such as Next.js and
+                Gatsby.
+              </p>
+            </li>
+            <li class="about__category" data-active="false">
+              <div class="about__heading-container">
+                <span class="about__bullet"></span>
+                <h3 class="about__category-heading">Design philosophy</h3>
+              </div>
+              <p class="about__category-description">
+                My designs focus on responsiveness and simplicity to deliver
+                attractive and usable interfaces.
+              </p>
+            </li>
+          </ul>
+
+          <div class="about__card"></div>
         </div>
       </div>
     </section>
@@ -120,8 +160,13 @@
       </div>
     </footer>
     <script>
-      document.addEventListener("scroll", () => {
-        document.documentElement.dataset.scroll = window.scrollY
+      document.querySelectorAll(".about__category").forEach((element) => {
+        element.addEventListener("mouseover", (event) => {
+          document
+            .querySelectorAll(".about__category")
+            .forEach((element) => (element.dataset.active = "false"))
+          event.currentTarget.dataset.active = "true"
+        })
       })
     </script>
   </body>

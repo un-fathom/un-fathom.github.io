@@ -14,10 +14,15 @@
   max-width: 1720px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--padding-x);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.hero__title-block {
+  margin-bottom: 4rem;
 }
 
 .hero__title-block :not(:last-child) {
@@ -25,7 +30,7 @@
 }
 
 .hero__title {
-  font-size: 4.5rem;
+  font-size: var(--text-7xl);
   color: white;
   font-weight: 400;
 }
@@ -37,7 +42,7 @@
 }
 
 .hero__subtitle {
-  font-size: 3rem;
+  font-size: var(--text-5xl);
   font-weight: 300;
   color: white;
 }
@@ -53,22 +58,70 @@
 .hero__path {
   bottom: 0;
   position: absolute;
-  height: calc((100vh - 450px) / 2);
+  height: calc((100vh - 664px) / 2);
   width: 100%;
   background: linear-gradient(180deg, #fff4d8 0%, #abc5bc 100%);
   clip-path: polygon(
-    calc(100vw - 1.5rem - 300px) 0,
-    calc(100vw - 1.5rem) 0,
+    calc((100vw - 300px) / 2) 0,
+    calc((100vw - 300px) / 2 + 300px) 0,
     100% 100%,
     0% 100%
   );
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero__title-block {
+    margin-bottom: 0;
+    padding-right: 4rem;
+  }
+
+  .hero__title {
+    font-size: var(--text-6xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-4xl);
+  }
+
+  .hero__path {
+    bottom: 0;
+    position: absolute;
+    height: calc((100vh - 450px) / 2);
+    width: 100%;
+    background: linear-gradient(180deg, #fff4d8 0%, #abc5bc 100%);
+    clip-path: polygon(
+      calc(100vw - var(--padding-x) - 300px) 0,
+      calc(100vw - var(--padding-x)) 0,
+      100% 100%,
+      0% 100%
+    );
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: var(--text-7xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-5xl);
+  }
 }
 
 @media (min-width: 1720px) {
   .hero__path {
     clip-path: polygon(
-      calc((100vw - (100vw - 1720px) / 2) - 1.5rem - 300px) 0,
-      calc((100vw - (100vw - 1720px) / 2) - 1.5rem) 0,
+      calc((100vw - (100vw - 1720px) / 2) - var(--padding-x) - 300px) 0,
+      calc((100vw - (100vw - 1720px) / 2) - var(--padding-x)) 0,
       100% 100%,
       0% 100%
     );

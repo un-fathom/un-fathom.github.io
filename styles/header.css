@@ -17,7 +17,7 @@ html:not([data-scroll="0"]) .header {
 .header__wrapper {
   max-width: 1720px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem var(--padding-x);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +36,7 @@ html:not([data-scroll="0"]) .header {
 .header__navlink {
   text-decoration: none;
   color: white;
-  font-size: 1.75rem;
+  font-size: var(--text-3xl);
   transition: opacity 150ms ease-in-out;
 }
 

@@ -6,7 +6,7 @@
 .footer__wrapper {
   max-width: 1720px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3rem var(--padding-x);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,5 +37,5 @@
 
 .footer__copyright {
   color: white;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }

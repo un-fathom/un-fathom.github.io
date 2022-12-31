@@ -1,5 +1,5 @@
 .projects {
-  height: 100vh;
+  height: 1000px;
   background-image: url("/resources/noise.png"),
     linear-gradient(
       180deg,
@@ -40,7 +40,7 @@
   max-width: 1720px;
   height: 100%;
   margin: 0 auto;
-  padding: 5rem 1.5rem;
+  padding: 5rem var(--padding-x);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +82,7 @@
 
 .projects__card-title {
   color: white;
-  font-size: 2.25rem;
+  font-size: var(--text-4xl);
   font-weight: 400;
 }
 
@@ -94,7 +94,7 @@
 
 .projects__card-description {
   color: white;
-  font-size: 1.5rem;
+  font-size: var(--text-2xl);
 }
 
 .project__card-image-wrapper {

@@ -6,7 +6,7 @@
 @import "footer.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Petrona:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 
 html {
   font-family: "Petrona", Times, serif;
@@ -16,6 +16,20 @@ html {
 :root {
   --background-primary: hsl(159, 12%, 59%);
   --background-secondary: hsl(159, 18%, 72%);
+  --padding-x: 2rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-9xl: 8rem;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +42,7 @@ html {
 }
 
 .section-title__title {
-  font-size: 3rem;
+  font-size: var(--text-5xl);
   color: white;
   font-weight: 400;
 }
@@ -42,6 +56,6 @@ html {
 
 .section-title__subtitle {
   color: white;
-  font-size: 2.25rem;
+  font-size: var(--text-4xl);
   font-weight: 400;
 }

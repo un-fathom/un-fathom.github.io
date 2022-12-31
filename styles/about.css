@@ -1,5 +1,5 @@
 .about {
-  height: 100vh;
+  height: 1000px;
   background-image: url("/resources/noise.png"),
     linear-gradient(
       180deg,
@@ -9,10 +9,78 @@
 }
 
 .about__wrapper {
-  max-width: 1720px;
+  max-width: 1400px;
+  height: 100%;
   margin: 0 auto;
-  padding: 5rem 1.5rem;
+  padding: 5rem var(--padding-x);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.about__flex-row {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.about__categories {
+  margin-right: 4rem;
+  width: 50%;
+}
+
+.about__categories :not(:first-child) {
+  margin-bottom: -0.5rem;
+}
+
+.about__category {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 150ms linear;
+}
+
+.about__category[data-active="true"] {
+  color: white;
+}
+
+.about__heading-container {
+  position: relative;
+  margin-bottom: -0.75rem;
+}
+
+.about__bullet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  top: 11px;
+  left: -6px;
+}
+
+.about__category-heading {
+  padding-left: 6rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: var(--text-2xl);
+}
+
+.about__category-description {
+  padding: 1.5rem 0 4rem 6rem;
+  border-left: 1px dashed;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+
+.about__category:last-of-type .about__category-description {
+  border: none;
+}
+
+.about__card {
+  background-color: var(--background-secondary);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  width: 600px;
 }
