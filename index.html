@@ -54,7 +54,7 @@
 
         <div class="about__flex-row">
           <ul class="about__categories">
-            <li class="about__category" data-active="true">
+            <li id="1" class="about__category" data-active="true">
               <div class="about__heading-container">
                 <span class="about__bullet"></span>
                 <h3 class="about__category-heading">Experience</h3>
@@ -64,7 +64,8 @@
                 Solidity and Web3 APIs.
               </p>
             </li>
-            <li class="about__category" data-active="false">
+
+            <li id="2" class="about__category" data-active="false">
               <div class="about__heading-container">
                 <span class="about__bullet"></span>
                 <h3 class="about__category-heading">Technologies</h3>
@@ -74,7 +75,8 @@
                 Gatsby.
               </p>
             </li>
-            <li class="about__category" data-active="false">
+
+            <li id="3" class="about__category" data-active="false">
               <div class="about__heading-container">
                 <span class="about__bullet"></span>
                 <h3 class="about__category-heading">Design philosophy</h3>
@@ -86,7 +88,14 @@
             </li>
           </ul>
 
-          <div class="about__card"></div>
+          <div class="about__card">
+            <img
+              src="/resources/project-1.jpg"
+              alt=""
+              class="about__img opacity-100" />
+            <img src="/resources/project-2.jpg" alt="" class="about__img" />
+            <img src="/resources/project-3.jpg" alt="" class="about__img" />
+          </div>
         </div>
       </div>
     </section>
@@ -114,6 +123,7 @@
                 class="projects__card-image" />
             </div>
           </a>
+
           <a href="#!" class="projects__card">
             <h3 class="projects__card-title">Project 2</h3>
             <div class="projects__card-divider"></div>
@@ -125,6 +135,7 @@
                 class="projects__card-image" />
             </div>
           </a>
+
           <a href="#!" class="projects__card">
             <h3 class="projects__card-title">Project 3</h3>
             <div class="projects__card-divider"></div>
@@ -160,12 +171,19 @@
       </div>
     </footer>
     <script>
-      document.querySelectorAll(".about__category").forEach((element) => {
-        element.addEventListener("mouseover", (event) => {
-          document
-            .querySelectorAll(".about__category")
-            .forEach((element) => (element.dataset.active = "false"))
+      const aboutCategories = document.querySelectorAll(".about__category")
+      const aboutImages = document.querySelectorAll(".about__img")
+
+      aboutCategories.forEach((category) => {
+        category.addEventListener("mouseover", (event) => {
+          aboutCategories.forEach(
+            (element) => (element.dataset.active = "false")
+          )
           event.currentTarget.dataset.active = "true"
+          aboutImages.forEach((img) => {
+            img.classList.remove("opacity-100")
+          })
+          aboutImages[event.currentTarget.id - 1].classList.add("opacity-100")
         })
       })
     </script>
