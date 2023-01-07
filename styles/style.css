@@ -16,6 +16,7 @@ html {
 :root {
   --background-primary: hsl(159, 12%, 59%);
   --background-secondary: hsl(159, 18%, 72%);
+  --font-sans: "IBM Plex Sans";
   --padding-x: 2rem;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
